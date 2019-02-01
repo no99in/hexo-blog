@@ -88,6 +88,24 @@ a {
   color: #f47466;
   transition: 0.25s;
 }
+#post figure table .gutter br {
+  display: none;
+}
+#post figure table .gutter span {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#post figure table .code br {
+  display: none;
+}
+#post figure table .code pre {
+  max-width: 43.375rem;
+}
+#post figure table .code .line {
+  width: 43rem;
+}
 #global-header {
   width: 100%;
   padding-top: 0.5rem;

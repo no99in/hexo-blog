@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html lang="">
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <title>
+    安装 hexo (install hexo) [ Hexo ]
+  </title>
+  
+  <!-- stylesheets list from _config.yml -->
+  
+  <link rel="stylesheet" href="/css/whilife.css">
+  
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038014_zcln65egdim.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+</head>
+
+<body>
+
+  <!-- <div id="menu-outer">
+    <div id="menu-inner">
+      
+        <a href="/">Home</a>
+      
+    </div>
+  </div> -->
+
+  <header id="global-header">
+    <section class="container flex">
+      <section class="logo flex">
+        <img src="/img/logo.png" alt="">
+      </section>
+      <section class="menu flex">
+        
+        <a href="/">
+          Home</a>
+        
+      </section>
+      <section class="searcher flex">
+        <section class="flex">
+          <input type="text" name="" id="">
+          <i class="iconfont icon-search margin-right "></i>
+        </section>
+      </section>
+    </section>
+  </header>
+
+  <!-- <div id="content-outer">
+    <div id="content-inner">
+      <div id="index-main" class="flex">
+  <div class="container">
+    <section class="box-container flex">
+      <div class="timebox-container">
+        <div class="timebox flex">
+          <div class="category flex-center">
+            <i class="iconfont icon-shebeikaifa"></i>
+          </div>
+          <div class="date flex-center">
+            <time datetime="2019-02-01T13:33:44.195Z">
+                02月01日
+            </time>
+          </div>
+        </div>
+      </div>
+      <div class="content-container flex">
+        <div class="contentbox">
+
+          <h1>
+            安装 hexo (install hexo)
+          </h1>
+
+          <article id="post">
+            <h2 id="hexo-是啥"><a href="#hexo-是啥" class="headerlink" title="hexo 是啥"></a>hexo 是啥</h2><p>(What is hexo?)</p>
+<p>hexo是一个轻量级的博客，他最大的优点就是可以轻松部署到Github、码云等平台。</p>
+<p>Hexo is a lightweight blog system, and the great thing about it is that hexo is easy to deploy to Github, Gitee and some such etc.</p>
+<h2 id="为什么选择个人博客"><a href="#为什么选择个人博客" class="headerlink" title="为什么选择个人博客"></a>为什么选择个人博客</h2><p>(Why choice hexo)</p>
+<p>博客平台辣么多，为什么选择个人博客。</p>
+<p>Blog platform is so much, why choose personal blog.</p>
+<ol>
+<li><p>自主可定制 self-customization</p>
+</li>
+<li><p>绑定自己的域名 Bind your own domain name</p>
+</li>
+<li><p>没有太多广告干扰 No AD</p>
+</li>
+<li><p>专注于记录与阅读 Focus on recording and reading</p>
+</li>
+</ol>
+<h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>(usage)</p>
+<p>怎么安装使用hexo是一个问题。</p>
+<p>How to install hexo?</p>
+<h3 id="git-nodejs"><a href="#git-nodejs" class="headerlink" title="git + nodejs"></a>git + nodejs</h3><p>可以参阅我<a href="https://www.no99.in/archives/install-nodejs/" target="_blank" rel="noopener">以前的文章</a>安装这些软体。</p>
+<p>See my <a href="https://www.no99.in/archives/install-git/" target="_blank" rel="noopener">previous articles</a> on installing these software.</p>
+<h3 id="安装hexo脚手架"><a href="#安装hexo脚手架" class="headerlink" title="安装hexo脚手架"></a>安装hexo脚手架</h3><p>(install hexo-cli)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h3 id="选择安装博客的目录"><a href="#选择安装博客的目录" class="headerlink" title="选择安装博客的目录"></a>选择安装博客的目录</h3><p>(Select the directory to install the blog)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Documents/hexo-blog</span><br></pre></td></tr></table></figure>
+<p>我选择的是个人文档目录下的hexo-blog，这个根据你的喜好而定。</p>
+<p>I chose the personal document(~/Documents/hexo-blog) as directory,In fact this is up to you.</p>
+<h3 id="初始化博客并且进行安装相关依赖"><a href="#初始化博客并且进行安装相关依赖" class="headerlink" title="初始化博客并且进行安装相关依赖"></a>初始化博客并且进行安装相关依赖</h3><p>(Initialize the blog and install the dependencies)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
+<h3 id="测试运行你的博客"><a href="#测试运行你的博客" class="headerlink" title="测试运行你的博客"></a>测试运行你的博客</h3><p>(run and enjot your blog)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>在本地打开localhost:4000进行对内容的调试，下一节我将会告诉大家如何将书写markdown博客和将博客部署到代码托管平台，大家都可以根据你的网址对你的网站进行访问，而这一切，均是免费！</p>
+<p>Open localhost:4000 locally to debug your blog. In the next section, I will tell you how to write markdown archives and deploy the blog to the code hosting platform. Everyone can visit your website according to your website address.</p>
+
+          </article>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</div>
+
+<div id="paginator">
+  
+</div>
+    </div>
+  </div> -->
+
+  <main id="main-content" class="flex">
+    <div class="container">
+      <div id="index-main" class="flex">
+  <div class="container">
+    <section class="box-container flex">
+      <div class="timebox-container">
+        <div class="timebox flex">
+          <div class="category flex-center">
+            <i class="iconfont icon-shebeikaifa"></i>
+          </div>
+          <div class="date flex-center">
+            <time datetime="2019-02-01T13:33:44.195Z">
+                02月01日
+            </time>
+          </div>
+        </div>
+      </div>
+      <div class="content-container flex">
+        <div class="contentbox">
+
+          <h1>
+            安装 hexo (install hexo)
+          </h1>
+
+          <article id="post">
+            <h2 id="hexo-是啥"><a href="#hexo-是啥" class="headerlink" title="hexo 是啥"></a>hexo 是啥</h2><p>(What is hexo?)</p>
+<p>hexo是一个轻量级的博客，他最大的优点就是可以轻松部署到Github、码云等平台。</p>
+<p>Hexo is a lightweight blog system, and the great thing about it is that hexo is easy to deploy to Github, Gitee and some such etc.</p>
+<h2 id="为什么选择个人博客"><a href="#为什么选择个人博客" class="headerlink" title="为什么选择个人博客"></a>为什么选择个人博客</h2><p>(Why choice hexo)</p>
+<p>博客平台辣么多，为什么选择个人博客。</p>
+<p>Blog platform is so much, why choose personal blog.</p>
+<ol>
+<li><p>自主可定制 self-customization</p>
+</li>
+<li><p>绑定自己的域名 Bind your own domain name</p>
+</li>
+<li><p>没有太多广告干扰 No AD</p>
+</li>
+<li><p>专注于记录与阅读 Focus on recording and reading</p>
+</li>
+</ol>
+<h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>(usage)</p>
+<p>怎么安装使用hexo是一个问题。</p>
+<p>How to install hexo?</p>
+<h3 id="git-nodejs"><a href="#git-nodejs" class="headerlink" title="git + nodejs"></a>git + nodejs</h3><p>可以参阅我<a href="https://www.no99.in/archives/install-nodejs/" target="_blank" rel="noopener">以前的文章</a>安装这些软体。</p>
+<p>See my <a href="https://www.no99.in/archives/install-git/" target="_blank" rel="noopener">previous articles</a> on installing these software.</p>
+<h3 id="安装hexo脚手架"><a href="#安装hexo脚手架" class="headerlink" title="安装hexo脚手架"></a>安装hexo脚手架</h3><p>(install hexo-cli)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h3 id="选择安装博客的目录"><a href="#选择安装博客的目录" class="headerlink" title="选择安装博客的目录"></a>选择安装博客的目录</h3><p>(Select the directory to install the blog)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Documents/hexo-blog</span><br></pre></td></tr></table></figure>
+<p>我选择的是个人文档目录下的hexo-blog，这个根据你的喜好而定。</p>
+<p>I chose the personal document(~/Documents/hexo-blog) as directory,In fact this is up to you.</p>
+<h3 id="初始化博客并且进行安装相关依赖"><a href="#初始化博客并且进行安装相关依赖" class="headerlink" title="初始化博客并且进行安装相关依赖"></a>初始化博客并且进行安装相关依赖</h3><p>(Initialize the blog and install the dependencies)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
+<h3 id="测试运行你的博客"><a href="#测试运行你的博客" class="headerlink" title="测试运行你的博客"></a>测试运行你的博客</h3><p>(run and enjot your blog)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>在本地打开localhost:4000进行对内容的调试，下一节我将会告诉大家如何将书写markdown博客和将博客部署到代码托管平台，大家都可以根据你的网址对你的网站进行访问，而这一切，均是免费！</p>
+<p>Open localhost:4000 locally to debug your blog. In the next section, I will tell you how to write markdown archives and deploy the blog to the code hosting platform. Everyone can visit your website according to your website address.</p>
+
+          </article>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</div>
+
+<div id="paginator">
+  
+</div>
+    </div>
+  </main>
+
+  <!-- <div id="bottom-outer">
+    <div id="bottom-inner">
+      Site by
+      no99in using
+      <a href="http://hexo.io">hexo blog framework</a>.
+      <br>
+      <a href="/">Home</a>
+    </div>
+  </div> -->
+
+  <footer id="global-footer">
+    <section class="container flex">
+      <section class="logo">
+        <img src="/img/slogan.png" alt="">
+      </section>
+      <section class="other">
+        <p>©2019 By
+          no99in
+        </p>
+        <p>Driven - Hexo|Theme - Whilife</p>
+      </section>
+    </section>
+  </footer>
+  <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  
+  <!-- scripts list from theme config.yml -->
+  
+  <script src="/js/whilife.js"></script>
+  
+  
+
+</body>
+
+</html>
