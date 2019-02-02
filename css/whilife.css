@@ -158,17 +158,19 @@ a {
 #post figure table .code br {
   display: none;
 }
-#post figure table .gutter span {
+#post figure table .gutter .line {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  height: 1.75rem;
 }
 #post figure table .code pre {
   max-width: 43.375rem;
 }
 #post figure table .code .line {
   width: 43rem;
+  height: 1.75rem;
 }
 #paginator {
   margin: 1.5rem 7.5rem;
