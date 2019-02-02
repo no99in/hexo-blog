@@ -67,7 +67,25 @@
           </h1>
 
           <article id="post">
-            <ul>
+            <h3 id="为什么选择-python-来作为设计模式的示例代码"><a href="#为什么选择-python-来作为设计模式的示例代码" class="headerlink" title="为什么选择 python 来作为设计模式的示例代码"></a>为什么选择 python 来作为设计模式的示例代码</h3><p>首先是语言入门难度</p>
+<ol>
+<li>C 语言缺乏一些面向对象的特性</li>
+<li>CPP 和 Java 入门门槛比较高</li>
+</ol>
+<p>其次 Python 语法简单同时面向对象，但是由于语法的一些特性，在继承和接口方面可能需要大家去琢磨，这些需要打磨的地方将会在后面涉及到的时候讲清楚。继承和接口并没有一些强语言像 Java 的类间关系清晰。</p>
+<h3 id="python-环境和集成开发环境"><a href="#python-环境和集成开发环境" class="headerlink" title="python 环境和集成开发环境"></a>python 环境和集成开发环境</h3><p>选择 python 需要配置环境，我这里是 windows 10 pro，安装 python 相对其他系统较复杂。</p>
+<p>下载 python 网址 <a href="https://www.python.org/downloads/release/python-372/" target="_blank" rel="noopener">https://www.python.org/downloads/release/python-372/</a></p>
+<p>我使用的是 3.72 exe 版本，但是理论上，我的代码可以在 3.x 的版本上跑起来。新手不推荐 zip 的版本，这个版本甚至没有 pip 可能会让你措手不及。</p>
+<p>安装默认即可。</p>
+<p>其次，我选择了 pycharm 作为集成开发环境。可能大家会说有点大材小用，但是这里我想强调，我一般不会让大家安装一个臃肿的开发环境，下面我会给你几张截图，来告诉你为什么使用它。</p>
+<p>pycharm 下载网站 <a href="https://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener">https://www.jetbrains.com/pycharm/download/</a></p>
+<a id="more"></a>
+<p><img src="https://mubu.com/document_image/d1e8a074-e9a1-4f2b-a09a-d359bd4bc649-661947.jpg" alt="pycharm"></p>
+<p>在任何方法前会标记是重写父类的方法还是实现了抽象类的方法，这对你去审视你的代码和去理解设计模式有很大的帮助。</p>
+<p>下面是项目环境的配置。</p>
+<p><img src="https://mubu.com/document_image/37b2d6b3-563e-4ac6-a7f9-14eec7c56801-661947.jpg" alt="pycharm"></p>
+<h3 id="UML类图关系"><a href="#UML类图关系" class="headerlink" title="UML类图关系"></a>UML类图关系</h3><p>UML 类图是设计模式的先导知识，有了它如虎添翼，下面我会详细介绍它。</p>
+<ul>
 <li>继承<ul>
 <li>一个类拿到另外的一个类的基础功能，并可以发展自己的新功能，在设计时一般没有争议性</li>
 </ul>
@@ -84,9 +102,6 @@
 <li>比依赖更强、不存在偶然性，双方的关系一般是平等的、关联可以是单向或者是双向的 </li>
 </ul>
 </li>
-</ul>
-<a id="more"></a>
-<ul>
 <li><p>聚合</p>
 <ul>
 <li>关联关系的特例，has-a(单向)的关系，整体与部分之间是可分离，<em>部分</em>有生命周期</li>
@@ -100,6 +115,43 @@
 <p><img src="https://mubu.com/document_image/41246821-dc1a-4bd7-b33a-f9f6379cae5a-661947.jpg" alt="人与大脑"></p>
 </li>
 </ul>
+<h3 id="别把音量调太大-监听模式"><a href="#别把音量调太大-监听模式" class="headerlink" title="别把音量调太大 监听模式"></a>别把音量调太大 监听模式</h3><p>手机插入耳机后调整音量，音量过大时就会发送通知，告诉你：较大音量有损听力！监听设计模式在其中起到了不小的作用。</p>
+<p>下面给出关系图</p>
+<ul>
+<li><p>关系图</p>
+<p><img src="https://mubu.com/document_image/9513196d-d623-4d79-b89b-4789d870ca31-661947.jpg" alt=""></p>
+</li>
+<li><p>首先需要明白监听者和被监听对象分别是哪个？</p>
+</li>
+<li><p>监听者实现了 update 二被监听者只需要发送 notice 通知即可！</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> abc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">audio_input</span><span class="params">(metaclass=abc.ABCMeta)</span>:</span></span><br><span class="line">    <span class="string">"声音输出"</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @abc.abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">audio</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"声音"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.observes = []</span><br><span class="line">        self.volum = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add_observe</span><span class="params">(self, observe)</span>:</span></span><br><span class="line">        self.observes.append(observe)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">remove_observe</span><span class="params">(self, observe)</span>:</span></span><br><span class="line">        self.observes.remove(observe)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">notice</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">for</span> o <span class="keyword">in</span> self.observes:</span><br><span class="line">            o.update(self)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_volum</span><span class="params">(self, size)</span>:</span></span><br><span class="line">        print(<span class="string">"当前音量为"</span> + str(size))</span><br><span class="line">        self.volum = size</span><br><span class="line">        self.notice()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">headset</span><span class="params">(audio_input)</span>:</span></span><br><span class="line">    <span class="string">"耳机"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update</span><span class="params">(self, audio)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> audio.volum &gt;= <span class="number">5</span>:</span><br><span class="line">            print(<span class="string">"音量过大将有损于听力"</span>)</span><br><span class="line">        <span class="keyword">if</span> audio.volum == <span class="number">10</span>:</span><br><span class="line">            print(<span class="string">"音量最大"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">speaker</span><span class="params">(audio_input)</span>:</span></span><br><span class="line">    <span class="string">"扬声器"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update</span><span class="params">(self, audio)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> audio.volum == <span class="number">10</span>:</span><br><span class="line">            print(<span class="string">"音量最大"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    h = headset()</span><br><span class="line">    s = speaker()</span><br><span class="line">    a = audio()</span><br><span class="line">    a.add_observe(h)</span><br><span class="line">    a.add_observe(s)</span><br><span class="line">    a.set_volum(<span class="number">4</span>)</span><br><span class="line">    a.set_volum(<span class="number">5</span>)</span><br><span class="line">    a.set_volum(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="从鸠占鹊巢看-适配器模式"><a href="#从鸠占鹊巢看-适配器模式" class="headerlink" title="从鸠占鹊巢看 适配器模式"></a>从鸠占鹊巢看 适配器模式</h3><p>鸠占鹊巢很好的体现了适配器模式，鸠不会筑巢，讲道理来说无法完成养育儿女的任务，但是鸠却可以通过别的手段来完成这项功能！</p>
+<p>首先，我们还是给出关系图！</p>
+<ul>
+<li><p>关系图</p>
+<p><img src="https://mubu.com/document_image/8bf0ed1c-4981-4ba9-936c-987dedc7e920-661947.jpg" alt=""></p>
+</li>
+<li><p>目标是筑巢来养育</p>
+</li>
+<li>鸠无法筑巢</li>
+<li>鸠需要通过将蛋产入鹊巢来完成任务</li>
+</ul>
+<ul>
+<li>适配器模式的缺点<ul>
+<li>如果原有系统没有设计好，适配器模式将很难实现。</li>
+<li>过多地使⽤用适配器，容易使代码结构混乱，如明明看到调⽤用的是 A ，调试时会发现内部调⽤用的却是 B 的实现。</li>
+</ul>
+</li>
+<li>适配器模式的优点<ul>
+<li>中间转换的作⽤。</li>
+<li>类的复⽤。</li>
+<li>灵活性好</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> abc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">nest</span><span class="params">(metaclass=abc.ABCMeta)</span>:</span></span><br><span class="line">    <span class="string">"巢"</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @abc.abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">build_nest</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">magpie</span><span class="params">(nest)</span>:</span></span><br><span class="line">    <span class="string">"鹊"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.name = <span class="string">"鹊"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">build_nest</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"我是"</span> + self.name + <span class="string">"，我能够筑巢！"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">dove</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="string">"鸠"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.name = <span class="string">"鸠"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">build_nest</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"我是"</span> + self.name + <span class="string">"，不能够筑巢！"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">dove_adpter</span><span class="params">(nest, dove)</span>:</span></span><br><span class="line">    <span class="string">"鸠 适配器"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">build_nest</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"我是"</span> + self.name + <span class="string">"，鸠占鹊巢！"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    m = magpie()</span><br><span class="line">    d = dove()</span><br><span class="line">    da = dove_adpter()</span><br><span class="line">    m.build_nest()</span><br><span class="line">    d.build_nest()</span><br><span class="line">    da.build_nest()</span><br></pre></td></tr></table></figure>
 
           </article>
         </div>
